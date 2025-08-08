@@ -19,7 +19,7 @@ export const MusicPlayer = () => {
     }
   };
   return (
-    <div className="flex flex-col gap-y-6 h-full border rounded-md overflow-hidden w-full max-w-xl">
+    <div className="flex flex-col gap-y-4 h-full border rounded-md overflow-hidden w-full max-w-xl">
       <div className="relative aspect-square">
         <Image
           src="https://plus.unsplash.com/premium_photo-1682629632657-4ac307921295?q=80&w=1026&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -28,19 +28,19 @@ export const MusicPlayer = () => {
           className="h-full w-full object-cover border-b border-black"
         />
       </div>
-      <div className="flex flex-col gap-y-4 p-4">
+      <div className="flex flex-col gap-y-3 p-4">
         <div className="flex items-center justify-center gap-8">
-          <button>
-            <SkipBackIcon className="size-6" />
+          <button className="border rounded-full p-2">
+            <SkipBackIcon className="size-6 " />
           </button>
-          <button onClick={handleClick}>
+          <button onClick={handleClick} className="border rounded-full p-2">
             {toggle === "play" ? (
               <PlayIcon className="size-6" />
             ) : (
               <PauseIcon className="size-6" />
             )}
           </button>
-          <button>
+          <button className="border rounded-full p-2">
             <SkipForwardIcon className="size-6" />
           </button>
         </div>
